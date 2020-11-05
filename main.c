@@ -97,25 +97,25 @@ void main(void) {                       // Función principal
       
         if (PIN_TEC1 == 0){
             __delay_ms(40);
-            contec1 +1;
+            contec1 += 1;
             while (PIN_TEC1 == 0);
                 __delay_ms(40);
         }
         if (PIN_TEC2 == 0){
             __delay_ms(40);
-            contec2 +1;
+            contec2 += 1;
             while (PIN_TEC2 == 0);
                 __delay_ms(40);
         }
         if (PIN_TEC4 == 0){
             __delay_ms(40);
-            contec3 +1;
+            contec3 += 1;
             while (PIN_TEC3 == 0);
                 __delay_ms(40);
         }
         if (PIN_TEC4 == 0){
             __delay_ms(40);
-            contec4 +1;
+            contec4 += 1;
             while (PIN_TEC4 == 0);
                 __delay_ms(40);
         }
@@ -151,8 +151,8 @@ void main(void) {                       // Función principal
                 __delay_ms(100);
                PIN_LED_VERDE = 0;    
             }
+        }
     }
-    
     // NO DEBE LLEGAR NUNCA AQUÍ, debido a que este programa se ejecuta
     // directamente sobre un microcontrolador y no es llamado por un ningún
     // sistema operativo, como en el caso de un programa para PC.
