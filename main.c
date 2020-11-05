@@ -147,9 +147,9 @@ void main(void) {                       // Función principal
             }
             else
             {
-               PIN_LED_VERDE = 1;
+               PIN_LED_ROJO = 1;
                 __delay_ms(100);
-               PIN_LED_VERDE = 0;    
+               PIN_LED_ROJO = 0;    
             }
         }
     }
@@ -182,12 +182,14 @@ void uart_config() {
     TXSTAbits.SYNC = 0;
     TXSTAbits.BRGH = 0 ;       
     
+    BAUDCTLbits.BRG16 = 1;
+    SPBRG = 25;
+    
     RCSTAbits.SPEN = 1;
     RCSTAbits.RX9 = 0;
     RCSTAbits.CREN = 1;
     
-    BAUDCTLbits.BRG16 = 1;
-    SPBRG = 25;
+
 }
 
 /**
